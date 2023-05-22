@@ -13,11 +13,17 @@ ref1 = open("../../referencia1.txt", "r")
 read = ref1.read()
 valores = read.strip().split("/n")
 
-for i in valores:
-    cache_simulation.store(i, length=8)
 
 for i in valores:
+    cache_simulation.store(i, length=8)
+"""
+for i in valores:
     cache_simulation.load(i, length=8)
+"""
+
+cache_simulation.load(2342)
+cache_simulation.store(512, length=8)
+cache_simulation.load(512, length=8)
 
 cache_simulation.force_write_back()
 cache_simulation.print_stats()
