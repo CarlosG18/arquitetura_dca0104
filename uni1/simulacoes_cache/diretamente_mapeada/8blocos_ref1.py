@@ -9,21 +9,16 @@ mem_principal.load_to(cache)
 mem_principal.store_from(cache)
 cache_simulation = CacheSimulator(cache, mem_principal)
 
-ref1 = open("../../referencia1.txt", "r")
-read = ref1.read()
-valores = read.strip().split("/n")
+with open("../../referencia1.txt", "r") as arquivo:
+    conteudo = arquivo.read()
+valores_str = conteudo.split()
+valores_int = list(map(int, valores_str))
 
-
-for i in valores:
-    cache_simulation.store(i, length=8)
-"""
-for i in valores:
+for i in valores_int:
     cache_simulation.load(i, length=8)
-"""
 
-cache_simulation.load(2342)
-cache_simulation.store(512, length=8)
-cache_simulation.load(512, length=8)
+for i in valores_int:
+    cache_simulation.load(i, length=8)
 
 cache_simulation.force_write_back()
 cache_simulation.print_stats()
