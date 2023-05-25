@@ -26,6 +26,6 @@ deverão ser realizadas 4 (mapeamento direto) + 16 (associativo em conjunto) + 4
 
 ## simulações
 
-- [cache diretamente mapeada](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/conteudos/mapeamento_direto.md)
-- [cache associativa em conjunto](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/conteudos/associativa_em_conjunto.md)
-- [cache totalmente associativa](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/conteudos/totalmente_associativa.md)
+- [cache diretamente mapeada](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni1/conteudos/mapeamento_direto.md)
+- [cache associativa em conjunto](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni1/conteudos/associativa_em_conjunto.md)
+- [cache totalmente associativa](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni1/conteudos/totalmente_associativa.md)
