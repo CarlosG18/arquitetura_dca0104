@@ -1,0 +1,1 @@
+# Simulações da chache Totalmente Associativa
