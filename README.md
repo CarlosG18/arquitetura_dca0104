@@ -32,7 +32,7 @@ deverão ser realizadas 4 (mapeamento direto) + 16 (associativo em conjunto) + 4
 - caso com bloco de 8bytes:
 **tabela de simulação**
 | ---- |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
-| ---- | ----------- | ----        | ----        | -----       | -----       |
+|:----:|:-----------:|:----:|:---:|:-----:|:-----:|
 |  L1  |11325(11325B)|22500(22500B)|33825(33825B)|22500(22500B)|22500(22500B)|
 |  MEM |22500(22500B)|        0(0B)|22500(22500B)|22500(22500B)|        0(0B)|
 
