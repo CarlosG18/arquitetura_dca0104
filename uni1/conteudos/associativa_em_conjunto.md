@@ -1,35 +1,23 @@
 # Simulações da chace Associativa em Conjunto
 
-**caso da política de substituição `LRU`**
+O mapeamento de cache associativo em conjunto, também conhecido como cache totalmente associativo, é uma técnica avançada de mapeamento de memória cache que visa melhorar o desempenho e a eficiência do sistema de cache em um processador.
 
-- 2 vias e blocos com 8bytes:
+Nesse tipo de mapeamento, cada bloco de memória é armazenado em qualquer conjunto disponível na cache, em vez de ser atribuído a um conjunto específico, como acontece no mapeamento direto ou associativo por conjunto. Cada conjunto da cache é capaz de armazenar apenas um bloco de memória.
 
-| |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
-| ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  |16801(16801B)|11251(16803B)|28052(33604B)|22500(22500B)|11251(22500B)|
-|  MEM |11251(16803B)|        0(0B)|11251(16803B)|11251(22502B)|        0(0B)|
+A grande vantagem do mapeamento de cache associativo em conjunto está na flexibilidade de localização dos blocos de memória na cache. Como qualquer bloco pode ser armazenado em qualquer conjunto disponível, não há conflitos de mapeamento e a probabilidade de ocorrerem misses de cache diminui consideravelmente.
 
-- 4 vias e blocos com 16bytes:
+No entanto, essa flexibilidade vem com um custo. O hardware necessário para implementar o mapeamento associativo em conjunto é mais complexo e, portanto, mais caro. Além disso, a busca por um bloco específico na cache também é mais lenta, já que é necessário verificar todos os conjuntos em paralelo.
 
-| |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
-| ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  |19576(19576B)|5626(14732B)|25202(33308B)|22500(22500B)|5626(22504B)|
-|  MEM |5626(13732B)|0(0B)|5626(   13732B)|5626(22504B)|0(0B)|
+Apesar dessas desvantagens, o mapeamento de cache associativo em conjunto é amplamente utilizado em processadores modernos de alto desempenho, onde o custo adicional e a complexidade são justificados pela necessidade de minimizar os misses de cache e melhorar a eficiência global do sistema.
 
-- 8 vias e blocos com 32bytes:
+Em resumo, o mapeamento de cache associativo em conjunto é uma técnica avançada de mapeamento de memória cache que oferece maior flexibilidade e redução de misses de cache. Embora tenha custos adicionais, seu uso é amplamente adotado em processadores de alto desempenho para otimizar o acesso à memória e melhorar o desempenho geral do sistema.
+**texto gerado pelo CHATGPT**
 
-| |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
-| ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  |20965(20965B)|2814(11767B)|23779(32732B)|22500(22500B)|2814(22512B)|
-|  MEM |2814(11767B)|0(0B)|2814(11767B)|2814 (22512B)|0(0B)|
+## simulações da cache com mapeamento associativo em conjunto para tipos de politicas de substituição:
 
-- 16 vias e blocos com 64bytes:
-
-| |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
-| ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  |21663(21663B)|1407(9957B)|23070(31620B)|22500(22500B)|1407(22512B)|
-|  MEM |1407(9957B)|0(0B)|1407(9957B)|1407(22512B)|0(0B)|
-
+- [LRU](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni1/conteudos/associativa_em_conjunto/LRU.md)
+- [FIFO](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni1/conteudos/associativa_em_conjunto/FIFO.md)
+- [Aleatória](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni1/conteudos/associativa_em_conjunto/aleatoria.md)
           
 
                   
