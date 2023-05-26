@@ -1,6 +1,18 @@
 # caso da política de substituição `LRU`
 
-- **descrição**: 
+A política de substituição LRU (Least Recently Used - Menos Recentemente Usado) é um algoritmo comumente utilizado para gerenciar a substituição de blocos de memória na cache. Essa política baseia-se no princípio de que os blocos de memória menos recentemente utilizados têm maior probabilidade de não serem acessados novamente no futuro próximo, sendo candidatos ideais para serem substituídos.
+
+O funcionamento da política LRU é baseado em manter um registro do histórico de acessos aos blocos de memória na cache. Para cada bloco, é mantido um contador que é atualizado toda vez que o bloco é acessado. Quando ocorre um miss na cache, ou seja, o bloco desejado não está presente, é necessário selecionar um bloco para ser substituído.
+
+Nesse momento, a política LRU analisa o contador de cada bloco e seleciona aquele com o valor mais alto, indicando que ele foi o menos recentemente utilizado. Esse bloco é então substituído pelo novo bloco que está sendo trazido para a cache. O contador do bloco recém-chegado é atualizado para indicar sua utilização mais recente.
+
+A política LRU é considerada eficaz porque aproveita a localidade temporal, ou seja, a tendência de que blocos de memória recentemente acessados tenham maior probabilidade de serem acessados novamente em breve. Ao substituir os blocos menos recentemente utilizados, a política LRU busca maximizar o aproveitamento da cache, minimizando os misses e otimizando o desempenho do sistema.
+
+No entanto, a implementação da política LRU requer um hardware adicional para manter o registro dos contadores ou utilizar estruturas de dados complexas, como listas encadeadas, para rastrear a ordem de utilização dos blocos. Esse requisito pode aumentar a complexidade e o custo do sistema de cache, especialmente em caches de maior capacidade.
+
+Apesar disso, a política de substituição LRU continua sendo amplamente utilizada devido à sua eficiência na redução de misses e melhoria do desempenho geral da cache. É importante ressaltar que existem outras políticas de substituição, como FIFO (First In, First Out - Primeiro a Entrar, Primeiro a Sair) e aleatória, que possuem características diferentes e são aplicadas em contextos específicos, dependendo das necessidades e restrições do sistema.
+
+**texto gerado pelo CHATGPT**
 
 
 ## Simulações
