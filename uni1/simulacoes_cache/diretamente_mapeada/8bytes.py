@@ -4,7 +4,7 @@ from cachesim import CacheSimulator, Cache, MainMemory
 
 mem_principal = MainMemory(65536)
 
-cache = Cache("L1",256,8,1,"LRU")
+cache = Cache("L1",4096,8,1)
 mem_principal.load_to(cache)
 mem_principal.store_from(cache)
 cache_simulation = CacheSimulator(cache, mem_principal)
