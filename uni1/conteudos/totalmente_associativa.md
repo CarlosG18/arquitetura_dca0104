@@ -22,8 +22,8 @@ Em resumo, a política de substituição aleatória é uma abordagem simples e i
 
 ||     HIT     | MISS        | LOAD        | STORE       | EVICT       |
 | ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  ||||||
-|  MEM ||||||
+|  L1  |22478(22478B)|23(1046B)|22501(23254B)|22500(22500B)|23(23552B)|
+|  MEM |23(1046B)|0(0B)|23(1046B)|23(23552B)|0(0B)|
 
 
 - caso com bloco de 16bytes
@@ -31,8 +31,8 @@ Em resumo, a política de substituição aleatória é uma abordagem simples e i
 
 |  |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
 | ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  ||||||
-|  MEM ||||||
+|  L1  |22478(22478B)|23(1046B)|22501(23254B)|22500(22500B)|23(23552B)|
+|  MEM |23(1046B)|0(0B)|23(1046B)|23(23552B)|0(0B)|
 
 
 - caso com bloco de 32bytes
@@ -40,8 +40,8 @@ Em resumo, a política de substituição aleatória é uma abordagem simples e i
 
 | |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
 | ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  ||||||
-|  MEM ||||||
+|  L1  |22478(22478B)|23(1046B)|22501(23254B)|22500(22500B)|23(23552B)|
+|  MEM |23(1046B)|0(0B)|23(1046B)|23(23552B)|0(0B)|
 
 
 - caso com bloco de 64bytes
@@ -49,5 +49,5 @@ Em resumo, a política de substituição aleatória é uma abordagem simples e i
 
 | |     HIT     | MISS        | LOAD        | STORE       | EVICT       |
 | ---- | ----------- | ----        | ----        | -----       | -----       |
-|  L1  ||||||
-|  MEM ||||||
+|  L1  |22478(22478B)|23(1046B)|22501(23254B)|22500(22500B)|23(23552B)|
+|  MEM |23(1046B)|0(0B)|23(1046B)|23(23552B)|0(0B)|
