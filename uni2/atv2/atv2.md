@@ -9,9 +9,7 @@ da função. Dependendo da função f, essa raiz pode ser encontrada por método
 diversas situações, é necessário aplicar métodos numéricos para tal objetivo.
 Um dos métodos numéricos mais comumente empregados para determinar raízes de equações é
 conhecido como método da bisseção. Neste procedimento, considere que tem-se uma função f(x)
-contínua e definida em um intervalo [a, b], com f(a) e f(b) com sinais opostos (ou seja, f(a) < 0 e f(b)
-> 0 ou f(a) > 0 e f(b) < 0). Assim sendo, pelo teorema do valor intermediário, existe um número p no
-intervalo (a, b) de tal forma que f(p) = 0, ou seja, é raiz da função f.
+contínua e definida em um intervalo [a, b], com f(a) e f(b) com sinais opostos (ou seja, f(a) < 0 e f(b) > 0 ou f(a) > 0 e f(b) < 0). Assim sendo, pelo teorema do valor intermediário, existe um número p no intervalo (a, b) de tal forma que f(p) = 0, ou seja, é raiz da função f.
 De forma resumida, o método da bisseção, que é usado para encontrar uma raiz, consiste em reduzir
 gradativamente o intervalo [a, b], até uma determinada tolerância, e testar o valor intermediário do
 novo intervalo para saber se ele está próximo da raiz desejada. O algoritmo do método da bisseção é

@@ -26,3 +26,37 @@ Para i = 0 até TAM, fazer
 H[V[i]] = H[V[i]] + 1;
 ```
 
+## construindo o codigo:
+
+**informações uteis**
+> - 'la' (Load Address): A instrução la é uma pseudoinstrução utilizada para carregar o endereço de uma label ou símbolo na memória para um registrador.
+- li (Load Immediate): A instrução li é usada para carregar um valor imediato (constante) em um registrador.
+- sw $registrador, offset($base), onde `$registrador` é o registrador que contém o valor que será armazenado na memória , `offset` é o deslocamento em relação ao endereço base e `$base` é o registrador que contém o endereço base.
+**comandos condicionais**
+- beq: Branch if Equal (Desvio se igual): Desvia o fluxo do programa para um determinado rótulo se dois registradores forem iguais.
+Exemplo: beq $t0, $t1, label
+- bne: Branch if Not Equal (Desvio se não igual): Desvia o fluxo do programa para um determinado rótulo se dois registradores não forem iguais.
+Exemplo: bne $t0, $t1, label
+- bgtz: Branch if Greater Than Zero (Desvio se maior que zero): Desvia o fluxo do programa para um determinado rótulo se um registrador for maior que zero.
+Exemplo: bgtz $t0, label
+- bltz: Branch if Less Than Zero (Desvio se menor que zero): Desvia o fluxo do programa para um determinado rótulo se um registrador for menor que zero.
+Exemplo: bltz $t0, label
+- bgez: Branch if Greater Than or Equal to Zero (Desvio se maior ou igual a zero): Desvia o fluxo do programa para um determinado rótulo se um registrador for maior ou igual a zero.
+Exemplo: bgez $t0, label
+- blez: Branch if Less Than or Equal to Zero (Desvio se menor ou igual a zero): Desvia o fluxo do programa para um determinado rótulo se um registrador for menor ou igual a zero.
+
+
+- primeiro definimos a deretiva `.data` para informar os dados que serão usados pelo programa, seguido da diretiva `.text` que indicara as instruções do programa. 
+
+- usando a diretiva `.space` você aloca um vetor com (n * 4 bytes), ou seja para alocar um vetor:
+
+> quero alocar um vetor com 9 espaços
+basta fazer x = (9 * 4)
+x = 36
+
+você deve usar o comando:
+
+```assembly
+    .data
+        H: .space 36
+```
