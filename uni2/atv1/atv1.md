@@ -28,8 +28,9 @@ H[V[i]] = H[V[i]] + 1;
 
 ## construindo o codigo:
 
+```txt
 **informações uteis**
-> - 'la' (Load Address): A instrução la é uma pseudoinstrução utilizada para carregar o endereço de uma label ou símbolo na memória para um registrador.
+- 'la' (Load Address): A instrução la é uma pseudoinstrução utilizada para carregar o endereço de uma label ou símbolo na memória para um registrador.
 - li (Load Immediate): A instrução li é usada para carregar um valor imediato (constante) em um registrador.
 - sw $registrador, offset($base), onde `$registrador` é o registrador que contém o valor que será armazenado na memória , `offset` é o deslocamento em relação ao endereço base e `$base` é o registrador que contém o endereço base.
 **comandos condicionais**
@@ -44,7 +45,7 @@ Exemplo: bltz $t0, label
 - bgez: Branch if Greater Than or Equal to Zero (Desvio se maior ou igual a zero): Desvia o fluxo do programa para um determinado rótulo se um registrador for maior ou igual a zero.
 Exemplo: bgez $t0, label
 - blez: Branch if Less Than or Equal to Zero (Desvio se menor ou igual a zero): Desvia o fluxo do programa para um determinado rótulo se um registrador for menor ou igual a zero.
-
+```
 
 - primeiro definimos a deretiva `.data` para informar os dados que serão usados pelo programa, seguido da diretiva `.text` que indicara as instruções do programa. 
 
