@@ -32,6 +32,8 @@ H[V[i]] = H[V[i]] + 1;
 **informações uteis**
 - 'la' (Load Address): A instrução la é uma pseudoinstrução utilizada para carregar o endereço de uma label ou símbolo na memória para um registrador.
 - li (Load Immediate): A instrução li é usada para carregar um valor imediato (constante) em um registrador.
+- lw $destino, offset($base)
+
 - sw $registrador, offset($base), onde `$registrador` é o registrador que contém o valor que será armazenado na memória , `offset` é o deslocamento em relação ao endereço base e `$base` é o registrador que contém o endereço base.
 **comandos condicionais**
 - beq: Branch if Equal (Desvio se igual): Desvia o fluxo do programa para um determinado rótulo se dois registradores forem iguais.
