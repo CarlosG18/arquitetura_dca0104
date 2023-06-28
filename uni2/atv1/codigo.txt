@@ -48,3 +48,57 @@
         sw $t4, 0($s0,$t3) # atualiza o valor do vetor H em seu determinado indicie
         addiu $s3, $s3 -1 # decrementa o valor de TAM
         bltz $s3, loop # verifica se o valor de TAM é menor que zero, se for maior ele desviará o fluxo para a etiqueta loop, caso contrario seguirá com o fluxo padrão do codigo
+
+
+codigo correto porem sem comentarios
+.data 
+H: .space 40
+v: .word 9, 5, 7, 5, 3, 4, 0, 2, 6, 4, 2, 5, 4, 1, 2, 1, 6, 2, 2, 3, 6, 3, 0, 0, 7, 8, 3, 4, 5, 4, 0, 5, 2, 9, 8, 7
+Lmax: .word 9
+TAM: .word 36
+
+.text
+  main:
+    la $t0, H
+    la $t1, Lmax
+    lw $t2, 0($t1)
+    
+    loop:
+      sw $zero, 0($t0)
+      addiu $t0, $t0, 4
+      addiu $t2, $t2, -1
+      bne $t2, $zero, loop
+      
+    la $t5, v
+    la $s1, TAM
+    lw $s2, 0($s1)
+    li $s3, 4
+    la $t0, H
+      
+    loopv:
+      lw $t4, 0($t5)
+      mult $t4, $s3
+      mflo $s4
+      add $s5, $s4, $t0
+      lw $t6, 0($s5)
+      addiu $t6, $t6, 1
+      sw $t6, 0($s5)
+      addiu $t5, $t5, 4
+      addiu $s2, $s2, -1
+      bne $s2, $zero, loopv
+      
+    la $t0, H
+    la $t1, Lmax
+    lw $t2, 0($t1)
+    
+    looph:
+      lw $t3, 0($t0)
+      li $v0, 1
+      move $a0, $t3
+      syscall
+      addiu $t0, $t0, 4
+      addiu $t2, $t2, -1
+      bne $t2, $zero, looph
+
+    li $v0, 10
+    syscall
