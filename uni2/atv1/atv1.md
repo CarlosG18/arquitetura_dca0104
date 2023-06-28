@@ -51,15 +51,15 @@ Exemplo: bgez $t0, label
 
 - primeiro definimos a deretiva `.data` para informar os dados que serão usados pelo programa, seguido da diretiva `.text` que indicara as instruções do programa. 
 
-- usando a diretiva `.space` você aloca um vetor com (n * 4 bytes), ou seja para alocar um vetor:
+- usando a diretiva `.space` você aloca um vetor com ((n+1) * 4 bytes), ou seja para alocar um vetor:
 
 > quero alocar um vetor com 9 espaços
-basta fazer x = (9 * 4)
-x = 36
+basta fazer x = ((9+1) * 4)
+x = 40
 
 você deve usar o comando:
 
 ```assembly
     .data
-        H: .space 36
+        H: .space 40
 ```
