@@ -40,3 +40,80 @@ Exibir saída: “Raiz não encontrada!”
 
 Assim sendo, encontre a raiz positiva da equação f(x) = x3 – 10 pelo método da bisseção, com TOL =
 0,1, máximo de 10 iterações e com intervalo de busca igual a [2.0, 3.0]
+
+## trabalhando com ponto flutuante em assembly
+
+Para trabalhar com números em ponto flutuante no assembly MIPS, você precisa utilizar as instruções e formatos adequados para manipular esses valores. O MIPS suporta números em ponto flutuante usando o padrão IEEE 754.
+
+Aqui estão algumas instruções básicas para trabalhar com números de ponto flutuante no MIPS:
+
+1. Carregar um valor de ponto flutuante:
+   ```
+   l.s $f0, <endereço>  ; Carrega o valor de ponto flutuante para o registrador $f0
+   ```
+
+2. Armazenar um valor de ponto flutuante:
+   ```
+   s.s $f0, <endereço>  ; Armazena o valor de ponto flutuante do registrador $f0 em um endereço de memória
+   ```
+
+3. Operações aritméticas:
+   - Adição de ponto flutuante:
+     ```
+     add.s $f2, $f0, $f4  ; $f2 = $f0 + $f4
+     ```
+
+   - Subtração de ponto flutuante:
+     ```
+     sub.s $f2, $f0, $f4  ; $f2 = $f0 - $f4
+     ```
+
+   - Multiplicação de ponto flutuante:
+     ```
+     mul.s $f2, $f0, $f4  ; $f2 = $f0 * $f4
+     ```
+
+   - Divisão de ponto flutuante:
+     ```
+     div.s $f2, $f0, $f4  ; $f2 = $f0 / $f4
+     ```
+
+   - Raiz quadrada de ponto flutuante:
+     ```
+     sqrt.s $f2, $f0      ; $f2 = sqrt($f0)
+     ```
+
+4. Conversão de inteiro para ponto flutuante:
+   ```
+   mtc1 $t0, $f0         ; Move o valor inteiro do registrador $t0 para o registrador de ponto flutuante $f0
+   ```
+
+5. Conversão de ponto flutuante para inteiro:
+   ```
+   cvt.w.s $f0, $f2      ; Converte o valor de ponto flutuante do registrador $f2 para um valor inteiro no registrador $f0
+   ```
+
+Essas são apenas algumas instruções básicas para trabalhar com números em ponto flutuante no assembly MIPS. Existem outras instruções e formatos disponíveis, dependendo da necessidade do seu programa. Certifique-se de consultar a documentação específica do seu ambiente de desenvolvimento MIPS para obter mais informações detalhadas.
+
+## realizar impressões
+
+.data
+    mensagem: .asciiz "Olá, mundo!"  # String a ser impressa
+    valor: .float 3.14               # Valor de ponto flutuante a ser impresso
+
+.text
+    main:
+        # Imprimir uma string
+        la $a0, mensagem          # Carrega o endereço da string em $a0
+        li $v0, 4                # Carrega o código da syscall print_string em $v0
+        syscall                  # Chama a syscall para imprimir a string
+
+        # Imprimir um valor de ponto flutuante
+        l.s $f12, valor          # Carrega o valor de ponto flutuante em $f12
+        li $v0, 2                # Carrega o código da syscall print_float em $v0
+        syscall                  # Chama a syscall para imprimir o valor de ponto flutuante
+
+        # Terminar o programa
+        li $v0, 10               # Carrega o código da syscall exit em $v0
+        syscall                  # Chama a syscall para encerrar o programa
+

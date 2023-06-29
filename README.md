@@ -33,4 +33,4 @@ deverão ser realizadas 4 (mapeamento direto) + 16 (associativo em conjunto) + 4
 ## atividade - Programação Assembly para Arquitetura MIPS
 
 - [atividade 1: (operações com valores inteiros)](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni2/atv1/atv1.md)
-- [atividade 2: (operações com pontos flutuantes)](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni2/atv1/atv2.md)
+- [atividade 2: (operações com pontos flutuantes)](https://github.com/CarlosG18/arquitetura_dca0104/tree/main/uni2/atv2/atv2.md)
